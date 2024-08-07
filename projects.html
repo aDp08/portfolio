@@ -3,17 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="sty.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f7f9fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background: linear-gradient(135deg, #ff6f61, #ffb74d);
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 0 0 20px 20px;
+            font-size: 2.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            width: calc(50% - 2rem);
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #2193b0, #6dd5ed);
+            padding: 1rem;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .project-header h2 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .project-body {
+            padding: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-body p {
+            margin: 0.5rem 0;
+        }
+
+        .project-body a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-body a:hover {
+            text-decoration: underline;
+        }
+
+        .project-card .more-info {
+            display: none;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 1rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 2;
+        }
+
+        .project-card:hover .more-info {
+            display: block;
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1> PROJECT SECTION </h1>
-    <ol>
-        <li class="aa"> IMAGE PROCESSING AND COMPUTER VISION PROJECT:
-            This project includes dynamic analysis of cctv feed using technologies like computer vision and image processing
-            
-        </li>
-    </ol>
-    
+    <h1>My Projects</h1>
+    <div class="container">
+        <div class="project-card" id="project1">
+            <div class="project-header">
+                <h2>Fin Tech Dashboard</h2>
+            </div>
+            <div class="project-body">
+                <p><strong>Description:</strong> A comprehensive dashboard for financial technology applications, integrating real-time data and analytics.</p>
+                <p><strong>Technologies:</strong> MERN Stack, AWS, React, Node.js, Express</p>
+                <p><strong>Link:</strong> <a href="https://your-fintech-dashboard-link.com" target="_blank">View Project</a></p>
+            </div>
+            <div class="more-info">
+                <p>Explore the features of this innovative dashboard designed for fintech applications.</p>
+            </div>
+        </div>
+        <div class="project-card" id="project2">
+            <div class="project-header">
+                <h2>End-to-End Data Pipeline with NYC Airbnb Data</h2>
+            </div>
+            <div class="project-body">
+                <p><strong>Description:</strong> A complete data pipeline for processing and analyzing Airbnb data from New York City.</p>
+                <p><strong>Technologies:</strong> SQL, Python, Data Engineering, ML</p>
+                <p><strong>Link:</strong> <a href="https://your-airbnb-data-pipeline-link.com" target="_blank">View Project</a></p>
+            </div>
+            <div class="more-info">
+                <p>See how data pipelines transform raw data into actionable insights.</p>
+            </div>
+        </div>
+        <div class="project-card" id="project3">
+            <div class="project-header">
+                <h2>IoT Automation System</h2>
+            </div>
+            <div class="project-body">
+                <p><strong>Description:</strong> An IoT-based system for automating and controlling various devices.</p>
+                <p><strong>Technologies:</strong> Arduino, IoT, Automation</p>
+                <p><strong>Link:</strong> <a href="https://your-iot-automation-link.com" target="_blank">View Project</a></p>
+            </div>
+            <div class="more-info">
+                <p>Discover how IoT technologies can streamline automation processes.</p>
+            </div>
+        </div>
+        <div class="project-card" id="project4">
+            <div class="project-header">
+                <h2>CCTV Feed Analysis Project</h2>
+            </div>
+            <div class="project-body">
+                <p><strong>Description:</strong> Dynamic analysis of CCTV feed using computer vision and image processing technologies.</p>
+                <p><strong>Technologies:</strong> Computer Vision, Image Processing</p>
+                <p><strong>Link:</strong> <a href="https://your-cctv-feed-analysis-link.com" target="_blank">View Project</a></p>
+            </div>
+            <div class="more-info">
+                <p>See the advanced techniques used in analyzing live CCTV feeds.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="projects.js"></script>
 </body>
 </html>
